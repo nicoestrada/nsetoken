@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:nsetoken/slider_widget.dart';
 import 'package:velocity_x/velocity_x.dart';
 import 'package:web3dart/web3dart.dart';
 
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //Client httpClient;
 //Web3Client ethClient;
 bool data = false;
+int myAmount = 0;
 
 final myAddress = "0x341BE0ADa94CEa1Fb79a5d17a1851f3B923Fe216";
 
@@ -45,8 +47,8 @@ final myAddress = "0x341BE0ADa94CEa1Fb79a5d17a1851f3B923Fe216";
       backgroundColor: Vx.gray300,
       body: ZStack([
         VxBox()
-          .blue500
-          .size(context.screenWidth, context.percentHeight * 18)
+          .blue600
+          .size(context.screenWidth, context.percentHeight * 30)
           .make(),
 
         VStack([
@@ -63,9 +65,21 @@ final myAddress = "0x341BE0ADa94CEa1Fb79a5d17a1851f3B923Fe216";
             .white
             .size(context.screenWidth, context.percentHeight * 18)
             .rounded
+            .shadowXl
             .make()
             .p16(),
           30.heightBox,
+
+          SliderWidget(
+            min: 0,
+            max: 100,
+            finalVal: (value) {
+              myAmount = (value*100).round();
+              print(myAmount);
+            },
+          ).centered().p(15).objectBottomCenter(),
+
+
           HStack([
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
@@ -106,7 +120,7 @@ final myAddress = "0x341BE0ADa94CEa1Fb79a5d17a1851f3B923Fe216";
           ], 
           alignment: MainAxisAlignment.spaceAround,
           axisSize: MainAxisSize.max,
-          ).p16()
+          ).p8()
         ])
       ]),
 
