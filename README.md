@@ -1,8 +1,11 @@
-# nsetoken
+# Starter Blockchain Wallet iOS App
 
-A new Flutter project.
+I created a smart contract (NSEToken) using the Ethereum blockchain and connected that to an iOS app using Flutter 🕊
 
-## Getting Started
+
+## Demo
+
+
 
 This project is a starting point for a Flutter application.
 
