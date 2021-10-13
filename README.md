@@ -13,6 +13,6 @@ First, in order to build the smart contract, I used (https://remix.ethereum.org)
 
 In order to complete the connection to Ethereum network, I used (https://infura.io) as the API client
 
-When the app is ran using *Flutter run*, the wallet balance is a live reflection of the current getBalance amount from my provided wallet address on Ethereum. The the smart contract is written on the Ethereum network in the Rinkeby Test Network. 
+When the app is ran using *Flutter run*, the wallet balance is a live reflection of the current getBalance amount from my provided wallet address on Ethereum. The smart contract is written on the Ethereum network in the Rinkeby Test Network. 
 
 I enjoyed building this starter project as an introduction to my Web3 adventures! 🥳
